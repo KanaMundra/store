@@ -1,0 +1,76 @@
+body {
+    overflow-x: hidden;
+    counter-reset: installation;
+    
+
+    counter-reset: user_mode;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.container-description{
+    min-height: 100%;
+}
+.information p::before {
+    counter-increment: installation;
+    content: "Step " counter(installation) ". ";
+    font-weight: 900;
+}
+
+.user-module-list p::before{
+    counter-increment: user_mode;
+    content: "Step " counter(user_mode) ". ";
+    font-weight: 900;
+}
+
+.product-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex: 2;
+}
+
+.product-container .img {
+    width: 100%;
+}
+
+.product-button {
+    background-position: center;
+    background: url(../images/texture2.png);
+    background-size: 100%;
+    border: none;
+    margin-top: 20px;
+    height:50px;
+    font-family:Lilita One;
+    border-radius: 5px;
+    text-transform: uppercase;
+    outline: none;
+    text-transform: uppercase;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 0, .7);
+    transition: 0.25s all;
+}
+
+
+.product-button:hover {
+    background-position: center;
+    background: url(../images/wall.jpg);
+    background-size: 100%;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 0, .5);
+}
+
+@media screen and (max-width:768px) {
+    .product-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .product-container .img {
+        margin-top: 400px;
+        width: 100%;
+        height: 400px;
+    }
+}

@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family:Lilita One;
+}
+
+
+body{
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+
+.container-main {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+
+}
+
+.container-main .title {
+    width: 100%;
+    margin-top: 10px;
+    height: 400px;
+    background: url('../images/bg.png');
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-main .title h1 {
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+.container-main .sub-title {
+    width: 80vw;
+    top: -50px;
+    z-index: 999;
+    position: relative;
+    background-color: #d9d9d9;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-main .sub-title h1 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.shop-container {
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 100px;
+    padding: 0 100px;
+}
+
+.shop-container .shop-items {
+   position: relative;
+    width: 300px;
+    height: 350px;
+    flex-shrink: 0;
+    display: flex;
+    background-color: #d9d9d9;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 9px 6px 2px rgba(0, 0, 0, 0.25);
+    transition: 0.12s ease-in;
+
+}
+
+.shop-container .shop-items iframe {
+    width: 100%;
+    height: 200px;
+    border-top-right-radius:10px ;
+    border-top-left-radius: 10px;
+}
+
+.shop-container .shop-items .product-name{
+    min-height: 40%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+
+.shop-container .shop-items .price {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    background-color: #73d76a;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.12s ease-in;
+}
+
+
+.shop-container .shop-items .price:hover{
+    background-color: #1CFF08;
+}
+
+.shop-container .shop-items:hover{
+    transform: scale(1.05);
+}
